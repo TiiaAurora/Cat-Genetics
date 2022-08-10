@@ -5,8 +5,8 @@ import random
 from enum import Enum
 from typing import Tuple, cast
 
-# Cat has a genome
-#    genome contains many chromosome
+# Rough plan: Cat has a genome
+#    genome contains many chromosomes
 #    chromosones come in many types
 #    Y in males only
 #    X once in males, twice in females (one from mother, one from father)
@@ -75,11 +75,11 @@ def mate(mother: Cat, father: Cat):
     return offspring
 
 # %%
-#   set up rules which attribute is prefered over the other
-#   agouti is preferred over non-agouti agouti = dominant
-#   black and red can happen at the same time Truebut only on females. Males have to decide. 50-50 chance
-#   long fur can only happen if both parents have or carry long fur (rez)
-#   sex is random
+#   Set up rules which attribute is prefered over the other:
+#   Agouti is preferred over non-agouti agouti = dominant
+#   Black and red can happen at the same time True - but only on females - males have to decide. 50-50 chance!
+#   Long fur can only happen if both parents have or carry long fur (rez)
+#   Sex is random
 
 
 def calculate_phenotype(mother: CatGenomeSide, father: CatGenomeSide):
@@ -126,7 +126,7 @@ def calculate_phenotype(mother: CatGenomeSide, father: CatGenomeSide):
     if torbie:
         tags.append('torbie')
     if fluffy:
-        tags.append('fluffy')
+        tags.append('long hair')
     if shorthair:
         tags.append('shorthair')
     if blue:
